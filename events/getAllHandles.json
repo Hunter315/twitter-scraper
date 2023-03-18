@@ -1,0 +1,8 @@
+{
+    "httpMethod": "GET",
+    "path": "/users",
+    "queryStringParameters": {
+        "count": "10",
+        "nextPageKey": ""
+    }
+}
