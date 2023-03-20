@@ -63,10 +63,12 @@ def lambda_handler(event, context):
     body_string = event['body']
     body = json.loads(body_string)
     handle = body['handle']
+    logging.info(f"processing handle : {handle}")
     url = f'https://twitter.com/{handle}'   
     try:
 
         # Open driver
+        logging.info("Open Driver")
         driver = open_driver()
 
         # Clean cookies
@@ -78,7 +80,7 @@ def lambda_handler(event, context):
         driver.get(url)
 
         # grab profile photo miniature from profile
-        target_XPATH = '//img[@alt="Opens profile photo"]'
+        target_XPATH = '//img[@class="css-9pa8cd"]'
         target = WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.XPATH, target_XPATH)))
         photo_url = target.get_attribute('src')
         print(photo_url)

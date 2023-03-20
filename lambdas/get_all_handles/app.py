@@ -20,7 +20,8 @@ def lambda_handler(event, context):
         # ideally, scans should be avoided since it is costly. 
         next_key = event['queryStringParameters'].get('nextPageKey', None)
         if next_key:
-            response = table.scan(ExclusiveStartKey=next_key, Limit=count)
+            next_key_dict = {'handle': {'S': next_key}}
+            response = table.scan(ExclusiveStartKey=next_key_dict, Limit=count)
         else:
             response = table.scan(Limit=count)
             
