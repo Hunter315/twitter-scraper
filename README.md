@@ -6,6 +6,8 @@ body JSON:
 `{
 "handle": {handle:string}
 }`
+
+The post endpoint will take some time to reflect in the get endpoints. The API Gateway operates asynchronously to avoid a timeout error and allows for the client to not wait for a reponse.
 - GET by handle
 ```https://djxjqh6uo1.execute-api.us-west-2.amazonaws.com/Prod/user/{handle}/profile_pic```
 
