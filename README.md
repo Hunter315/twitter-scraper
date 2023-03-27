@@ -53,9 +53,4 @@ Here is a quick proposal to scale this project up a little bit more to handle mo
 
 ![twitter_scraper_v2](https://user-images.githubusercontent.com/35641380/226260307-2f67ce82-f9fa-4727-a027-28dee1466d5b.PNG)
 
-## How long did it take me?
-I'd say I unfortunately overstepped the boundaries of 3-4 hours in this project and approached more like 6 hours, documentation included. An extra hour or two was spent in documentation for using WebDriver in Python and learning the AWS SAM environment. 
-
-
-Thanks again, I had fun with this one!
 
